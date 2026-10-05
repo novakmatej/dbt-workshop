@@ -1,0 +1,8 @@
+id,customer_id,order_date,status
+1,1,2026-09-01,completed
+2,2,2026-09-02,completed
+3,1,2026-09-05,returned
+4,3,2026-09-07,completed
+5,4,2026-09-10,placed
+6,1,2026-09-12,completed
+7,2,2026-09-15,shipped

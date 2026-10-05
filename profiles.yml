@@ -1,0 +1,7 @@
+jungle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: jungle.duckdb
+      threads: 4

@@ -1,0 +1,13 @@
+name: jungle_shop
+version: "1.0.0"
+profile: jungle_shop
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+models:
+  jungle_shop:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

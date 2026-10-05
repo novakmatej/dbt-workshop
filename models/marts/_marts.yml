@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: customers
+    description: Jeden řádek na zákazníka se souhrnem objednávek (bez vrácených).
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
