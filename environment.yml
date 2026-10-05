@@ -7,4 +7,4 @@ dependencies:
   - code-server
   - jupyter-vscode-proxy
   - pip:
-      - dbt-duckdb==1.11.0
+      - dbt==2.0.6

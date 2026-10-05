@@ -1,6 +1,6 @@
 # Od kořenů k plodům: postav si první dbt projekt
 
-Workshop Data Festival VŠE 2026. Minimální dbt projekt nad DuckDB.
+Workshop Data Festival VŠE 2026. Minimální dbt projekt nad DuckDB (dbt v2, DuckDB driver je součástí, žádný adapter navíc).
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/novakmatej/dbt-workshop/HEAD?urlpath=vscode%2F%3Ffolder%3D%2Fhome%2Fjovyan)
 
@@ -16,7 +16,7 @@ dbt test     # spustí testy kvality dat
 dbt build    # seed + run + test najednou
 ```
 
-3. Dokumentace: `dbt docs generate --static` a pak otevři `target/static_index.html`.
+3. Dokumentace: `dbt docs generate` a pak `python -m http.server 8000 -d target`. Otevři `<binder-url>/proxy/8000/`.
 
 ## Struktura (kořeny → kmen → plody)
 - `seeds/` - kořeny: surová data (CSV)
