@@ -2,11 +2,11 @@
 
 Workshop Data Festival VŠE 2026. Minimální dbt projekt nad DuckDB.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/<GITHUB_USER>/dbt-workshop/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/novakmatej/dbt-workshop/HEAD?urlpath=vscode%2F%3Ffolder%3D%2Fhome%2Fjovyan)
 
 ## Spuštění
 1. Klikni na badge Binder (bez registrace). Tab nech otevřený v popředí.
-2. V JupyterLab otevři **Terminal** a spusť:
+2. Otevře se VS Code v prohlížeči. Terminál: menu → Terminal → New Terminal a spusť:
 
 ```bash
 dbt debug    # ověří připojení

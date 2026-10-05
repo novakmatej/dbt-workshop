@@ -1,0 +1,10 @@
+name: dbt-workshop
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - code-server
+  - jupyter-vscode-proxy
+  - pip:
+      - dbt-duckdb==1.11.0
