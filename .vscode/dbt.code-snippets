@@ -1,0 +1,82 @@
+{
+  // Napište prefix (např. __ref) a potvrďte Tab nebo Enter.
+  "dbt ref": {
+    "scope": "sql",
+    "prefix": "__ref",
+    "body": "{{ ref('$1') }}$0",
+    "description": "Odkaz na jiný dbt model"
+  },
+  "dbt source": {
+    "scope": "sql",
+    "prefix": "__source",
+    "body": "{{ source('${1:jungle}', '$2') }}$0",
+    "description": "Odkaz na zdrojovou tabulku"
+  },
+  "dbt macro": {
+    "scope": "sql",
+    "prefix": "__macro",
+    "body": [
+      "{% macro ${1:nazev}(${2:column}) %}",
+      "    $0",
+      "{% endmacro %}"
+    ],
+    "description": "Nové makro v macros/"
+  },
+  "dbt sources yml": {
+    "scope": "yaml",
+    "prefix": "__sources",
+    "body": [
+      "sources:",
+      "  - name: ${1:jungle}",
+      "    description: ${2:Surová data e-shopu.}",
+      "    schema: ${3:main}",
+      "    tables:",
+      "      - name: ${4:raw_orders}$0"
+    ],
+    "description": "Kostra _sources.yml"
+  },
+  "dbt models yml": {
+    "scope": "yaml",
+    "prefix": "__model",
+    "body": [
+      "models:",
+      "  - name: ${1:model}",
+      "    description: ${2:popis}",
+      "    columns:",
+      "      - name: ${3:column}",
+      "        description: ${4:popis}$0"
+    ],
+    "description": "Kostra modelu v YAML"
+  },
+  "dbt tests": {
+    "scope": "yaml",
+    "prefix": "__tests",
+    "body": [
+      "data_tests:",
+      "  - unique",
+      "  - not_null$0"
+    ],
+    "description": "unique + not_null"
+  },
+  "dbt accepted_values": {
+    "scope": "yaml",
+    "prefix": "__accepted",
+    "body": [
+      "- accepted_values:",
+      "    arguments:",
+      "      values: [${1:placed, shipped, completed, returned}]$0"
+    ],
+    "description": "accepted_values (dbt v2 syntaxe)"
+  },
+  "dbt relationships": {
+    "scope": "yaml",
+    "prefix": "__relationships",
+    "body": [
+      "- relationships:",
+      "    arguments:",
+      "      to: ref('${1:stg_customers}')",
+      "      field: ${2:customer_id}$0"
+    ],
+    "description": "relationships (dbt v2 syntaxe)"
+  }
+}
