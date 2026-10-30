@@ -4,3 +4,8 @@ logs/
 *.duckdb
 *.duckdb.wal
 .user.yml
+dbt_internal_packages/
+presentation/
+jc-brand/
+.claude/
+.venv/
