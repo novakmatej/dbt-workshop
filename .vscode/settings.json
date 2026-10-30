@@ -1,0 +1,15 @@
+{
+  // Skryje soubory, které do domovské složky přidá Binder / conda / code-server.
+  "files.exclude": {
+    ".*": true,
+    ".vscode": false,
+    "**/.git": true,
+    "logs": true,
+    "dbt_internal_packages": true,
+    "binder": true,
+    "environment.yml": true,
+    "requirements.txt": true
+  },
+  "workbench.startupEditor": "none",
+  "security.workspace.trust.enabled": false
+}
